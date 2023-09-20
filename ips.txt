@@ -1,4 +1,3 @@
-# Last modified: 2023-09-19
 # Assholes attempting to exploit SSL VPN
 # single IPs
 47.190.163.41
