@@ -1,5 +1,6 @@
 # Assholes attempting to exploit SSL VPN
 # single IPs
+12.66.21.26
 47.190.163.41
 68.15.207.148
 69.193.185.74
