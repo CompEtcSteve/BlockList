@@ -1,4 +1,4 @@
-# Assholes attempting to exploit SSL VPN
+# Criminals attempting to exploit SSL VPN
 # single IPs
 12.66.21.26
 12.89.6.166
