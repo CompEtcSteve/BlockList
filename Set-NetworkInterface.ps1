@@ -91,7 +91,6 @@ function Add-MultiHomeIP {
         try {
             Write-Host "Adding IP address $IPAddress with prefix length $PrefixLength..." -ForegroundColor Yellow
             New-NetIPAddress -InterfaceAlias $InterfaceName -IPAddress $IPAddress -PrefixLength $PrefixLength -ErrorAction Stop
-            Set-NetIPAddress -InterfaceAlias $InterfaceName -IPAddress $IPAddress -PrefixLength $PrefixLength -ErrorAction Stop
             Write-Host "IP address $IPAddress added successfully." -ForegroundColor Green
         } catch {
             Write-Host "Failed to add IP address: $_" -ForegroundColor Red
@@ -153,10 +152,8 @@ if ($Choice -eq "2") {
         Write-Host $IPAddress $PrefixLength -ForegroundColor Yellow
         if (-not [string]::IsNullOrWhiteSpace($Gateway)) {
             New-NetIPAddress -InterfaceAlias $InterfaceName -IPAddress $IPAddress -PrefixLength $PrefixLength -DefaultGateway $Gateway -ErrorAction Stop
-            Set-NetIPAddress -InterfaceAlias $InterfaceName -IPAddress $IPAddress -PrefixLength $PrefixLength -ErrorAction Stop
         } else {
             New-NetIPAddress -InterfaceAlias $InterfaceName -IPAddress $IPAddress -PrefixLength $PrefixLength -ErrorAction Stop
-            Set-NetIPAddress -InterfaceAlias $InterfaceName -IPAddress $IPAddress -PrefixLength $PrefixLength -ErrorAction Stop
             Write-Host "No gateway provided. Skipping gateway configuration." -ForegroundColor Yellow
         }
         Write-Host "IP address and subnet mask configured successfully." -ForegroundColor Green
