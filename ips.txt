@@ -1,5 +1,6 @@
 # Criminals attempting to exploit SSL VPN
 # single IPs
+4.39.154.182
 12.66.21.26
 12.89.6.166
 12.189.144.75
